@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&famille=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Générateur de MDP</title>
+ 
+</head>
+<body class="font-['Kumbh_Sans'] bg-slate-900 text-slate-100 ">
+ 
+<div class="flex flex-col content-center items-center mx-auto mt-24">
+  <h1>Password Generator</h1>
+  <div class="bg-slate-800 w-72 px-2 h-10 mt-2">
+  <div class="flex justify-between content-center items-center mt-2 px-2">
+    <h2 class="opacity-20 font-semibold" id="password">P4$5W0rD ! </h2>
+    <i class="fa-regular fa-copy text-lime-400"></i>
+  </div>
+  </div>
+<form action=""></form>
+  <div class="bg-slate-800 w-72 px-2 h-72 mt-2 ">
+    <!-- Input range -->
+    
+    <div class="flex flex-col justify-start  px-2">
+      <div class="flex justify-between content-center items-center">
+        <h3 class="capitalize text-sm my-2">character Length</h3>
+        <p id="quantity" class="text-lime-400">0</p>
+      </div>
+  <input type="range" class="w-full accent-lime-400" min="1" max="12">
+    </div>
+    <!-- Input checkbox -->
+  <div class="ml-2 flex flex-col justify-start  mt-2 ">
+    <div class=" space-x-2 ">
+            <input type="checkbox" name="uppercase_letter" id="">
+            <label for="uppercase_letter" class="text-sm">Include <span class="font-semibold text-lime-400">Uppercase Letters</span> </label>
+    </div>
+
+      <div class=" space-x-2">
+        <input type="checkbox" name="lowercase_letter" id="" class="">
+        <label for="lowercase_letter" class="text-sm ">Include <span class="font-semibold text-lime-400">Lowercase Letters</span></label>
+      </div>
+
+    <div class=" space-x-2">
+            <input type="checkbox" name="numbers" id="">
+            <label for="numbers" class="text-sm">Include <span class="font-semibold text-lime-400">Numbers</span></label>
+    </div>
+
+    <div class=" space-x-2">
+        <input type="checkbox" name="symbols" id="">
+        <label for="symbols" class="text-sm">Include <span class="font-semibold text-lime-400">Symbols</span></label>
+    </div>
+  </div>
+  <!-- Strenghth -->
+  <div class="flex justify-between px-4 bg-slate-900 py-2 mx-2 mt-3">
+    <h4 class="text-sm text-slate-600 font-semibold">STRENGTH</h4>
+    <div class="flex space-x-2">
+      <div class="border border-slate-100 w-2 h-6"></div>
+      <div class="border border-slate-100 w-2 h-6"></div>
+      <div class="border border-slate-100 w-2 h-6"></div>
+      <div class="border border-slate-100 w-2 h-6"></div>
+    </div>
+  </div>
+  <div class="flex justify-center px-4 bg-lime-300 text-slate-900 font-bold py-2 mx-2 mt-3 ">
+   <input type="submit" value="GENERATE">
+<i class="fa-solid fa-arrow-right-long mt-[1px] text-sm ml-2"></i>
+  </div>
+  </div>
+</div>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
