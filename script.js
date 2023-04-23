@@ -14,6 +14,10 @@ var password = document.getElementById('password');
 var checked;
 var copy_password = document.querySelector('#copy_password');
 var nbreRange;
+var box_color = document.querySelectorAll(".box_color");
+/**
+ * Choisir les éléments checkbox pour son MDP
+ */
 (_a = document.querySelector('#different_choice')) === null || _a === void 0 ? void 0 : _a.addEventListener("change", function (e) {
     switch (e.target.id) {
         case "uppercase_letter":
@@ -31,13 +35,20 @@ var nbreRange;
     }
 });
 /**
- * Barre pour la boucle for
+ * Choisir la quantité souhaité pour son MDP
  */
 (_b = document.querySelector('#range_quantity')) === null || _b === void 0 ? void 0 : _b.addEventListener("change", function (e) {
     new_password_reverse = new_password.join("").split("");
     nbreRange = Number(e.target.value);
-    quantity.innerHTML = e.target.value;
+    quantity.innerHTML = String(nbreRange);
+    if (nbreRange > 6) {
+        alert('okk');
+    }
+    console.log(nbreRange);
 });
+/**
+ * Envoyer les données via le boutton confirmer
+ */
 generate_form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (new_password.length === 0 || nbreRange === undefined) {

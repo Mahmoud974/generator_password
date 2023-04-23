@@ -14,19 +14,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&famille=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Générateur de MDP</title>
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 </head>
-<body class="font-['Kumbh_Sans'] bg-slate-900 text-slate-100 ">
+<body class="font-['Kumbh_Sans'] bg-slate-900 text-slate-100  ">
  
 <div class="flex flex-col content-center items-center mx-auto mt-24">
   <h1 class="title">Password Generator</h1>
   <div class="bg-slate-800 w-72 px-2 h-10 mt-2">
   <div class="flex justify-between content-center items-center mt-2 px-2">
-    <h2 class="opacity-20 font-semibold" id="password"></h2>
-    <i class="fa-regular fa-copy text-lime-400" id="copy_password"></i>
+    <h2 class=" font-semibold" id="password"></h2>
+    <i class="fa-regular fa-copy text-lime-400 mt-1" id="copy_password"></i>
   </div>
   </div>
   <p class="flex flex-none" id="recover_MDP"></p>
@@ -64,23 +65,33 @@
     </div>
   </div>
   <!-- Strenghth -->
-  <div class="flex justify-between px-4 bg-slate-900 py-2 mx-2 mt-3">
-    <h4 class="text-sm text-slate-600 font-semibold" id="strength">STRENGTH</h4>
-    <div class="flex space-x-2">
-      <div class="border border-slate-100 w-2 h-6"></div>
-      <div class="border border-slate-100 w-2 h-6"></div>
-      <div class="border border-slate-100 w-2 h-6"></div>
-      <div class="border border-slate-100 w-2 h-6"></div>
+  <div class="flex items-center justify-between px-4 bg-slate-900 py-2  mt-3 w-6/6">
+    <h4 class="text-xs text-slate-600 font-semibold" id="strength">STRENGTH</h4>
+    <div >
+     
+   <div class="flex space-x-2 items-center">
+    <p class="text-xs">MEDIUM</p>
+       <div class=" w-2 h-6 bg-yellow-200 box_color"></div>
+      <div class=" w-2 h-6 bg-yellow-200 box_color"></div>
+      <div class=" w-2 h-6 bg-yellow-200 box_color"></div>
+      <div class=" w-2 h-6 border border-white"></div>
+   </div>
+      
     </div>
   </div>
-  <div class="flex justify-center px-4 bg-lime-300 text-slate-900 font-bold py-2 mx-2 mt-3 ">
-   <input type="submit" value="GENERATE" id="generate_password">
+  <div class="flex space-x-2 cursor-pointer">
+    <div class=" flex w-full justify-center items-center px-4 bg-lime-200 text-slate-900 font-bold py-2 ml-1 mt-3 ">
+   <input type="submit" value="GENERATE" id="generate_password" class="text-xs">
 <i class="fa-solid fa-arrow-right-long mt-[1px] text-sm ml-2"></i>
+  </div>
+ 
   </div>
   </div>
 </div>
 </form>
 
+
 <script src="script.js"></script>
+<script src="dist/clipboard.min.js"></script>
 </body>
 </html>
